@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Skills and Talents</title>
+
+  <!-- META TAG (empty) -->
+  <meta charset="UTF-8">
+
+  <!-- LINK TAG (external CSS) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- INTERNAL STYLE (embedded CSS proof) -->
+  <style>
+    .inline-demo-span {
+      color: teal;
+      font-weight: bold;
+    }
+  </style>
+
+  <!-- SCRIPT TAG -->
+  <script src="script.js" defer></script>
+
+  <!-- NOSCRIPT TAG -->
+  <noscript>
+    Please enable JavaScript to enjoy full site functionality.
+  </noscript>
+</head>
+
+<body>
+
+<!-- SINGLE LINE COMMENT -->
+<!-- Loader Section -->
+
+<!-- MULTI LINE COMMENT
+This loader shows while the page loads
+-->
+
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<div id="scrollProgress"></div>
+
+<button id="themeToggle" title="Toggle Theme">🌙</button>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="childhood.html">Childhood</a>
+  <a href="education.html">Education</a>
+  <a href="skills.html">Skills</a>
+  <a href="future.html">Future</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<h1>Skills and Talents</h1>
+
+<p align="center">
+This page showcases my <strong>technical</strong> and <em>personal</em> skills.
+I am a <span class="inline-demo-span">well-rounded</span> individual.
+</p>
+
+<hr width="60%" color="gray" size="4" align="center">
+
+<!-- MARQUEE (legacy requirement) -->
+<marquee behavior="scroll" direction="left">
+  These are some of my key skills and talents!
+</marquee>
+
+<div class="skills-container">
+
+  <div class="skill">
+    <span color="black">HTML</span>
+    <div class="bar">
+      <div class="fill" data-skill="90"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <span>CSS</span>
+    <div class="bar">
+      <div class="fill" data-skill="85"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <span>JavaScript</span>
+    <div class="bar">
+      <div class="fill" data-skill="75"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <span>Problem Solving</span>
+    <div class="bar">
+      <div class="fill" data-skill="80"></div>
+    </div>
+  </div>
+
+</div>
+
+<br>
+
+<!-- FIGURE + IMAGE -->
+<figure>
+  <img src="assets\pictures\lofi-room-cityscape-urban-3840x2160-14880.jpg"
+       alt="Skill related image"
+       width="300"
+       height="200">
+  <figcaption>Visual representation of my creative work</figcaption>
+</figure>
+
+<h2 style="text-align:center;">My Gallery</h2>
+
+<div class="gallery">
+  <img src="assets\pictures\WhatsApp Image 2 2025-12-29 at 14.25.17.jpeg" alt="Gallery Image 1" onclick="openLightbox(this.src)">
+  <img src="assets\pictures\WhatsApp Image 3 2025-12-29 at 14.25.18.jpeg" alt="Gallery Image 2" onclick="openLightbox(this.src)">
+  <img src="assets\pictures\WhatsApp Image 4 2025-12-29 at 14.25.18.jpeg" alt="Gallery Image 3" onclick="openLightbox(this.src)">
+  <img src="assets\pictures\WhatsApp Image 2025-12-29 at 14.25.17.jpeg" alt="Gallery Image 4" onclick="openLightbox(this.src)">
+</div>
+
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightboxImg" alt="Expanded image">
+</div>
+
+<hr width="50%" color="black" size="3" align="right">
+
+<!-- AUDIO TAG -->
+<figure>
+  <figcaption>Background Music:</figcaption>
+  <audio controls>
+    <source src="assets\video\WhatsApp Audio 2026-02-06 at 23.02.45.mpeg" type="audio/mpeg">
+  </audio>
+</figure>
+
+<!-- FORM + INPUT (empty tags) -->
+<h3>Skill Feedback Form</h3>
+<form>
+  Name: <input type="text" placeholder="Enter your name"><br><br>
+  Favorite Skill: <input type="text" placeholder="Your favorite skill"><br><br>
+  <input type="submit" value="Submit Feedback">
+</form>
+
+<br>
+
+<!-- VIDEO USING IFRAME -->
+<h3>Learning Inspiration (iframe)</h3>
+<iframe width="300" height="200"
+  src="assets\video\focus mvp.mp4">
+</iframe>
+
+<!-- VIDEO USING VIDEO TAG -->
+<h3>My Practice Video (video tag)</h3>
+<video width="300" height="200" controls>
+  <source src="assets\video\focus mvp.mp4" type="video/mp4">
+</video>
+
+<!-- VIDEO USING ANCHOR -->
+<h3>Download Practice Video (anchor)</h3>
+<a href="assets\video\focus mvp.mp4">Click here to watch/download my video</a>
+
+<br><br>
+
+</body>
+</html>

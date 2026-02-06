@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<div id="scrollProgress"></div>
+
+<button id="themeToggle" title="Toggle Theme">🌙</button>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="childhood.html">Childhood</a>
+  <a href="education.html">Education</a>
+  <a href="skills.html">Skills</a>
+  <a href="future.html">Future</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<h1>Contact Information</h1>
+
+<form onsubmit="return validateForm()">
+  <label>Name:</label><br>
+  <input type="text" id="name"><br><br>
+
+  <label>Email:</label><br>
+  <input type="email" id="email"><br><br>
+
+  <label>Message:</label><br>
+  <textarea id="message"></textarea><br><br>
+
+  <button type="submit">Send</button>
+</form>
+
+<p>Email: yourname@email.com</p>
+<p>GitHub: https://github.com/yourusername</p>
+<p>LinkedIn: </p>
+
+</body>
+</html>

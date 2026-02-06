@@ -1,0 +1,434 @@
+/* ===== Global Reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Root Theme Colors ===== */
+:root {
+  --primary: #0d6efd;
+  --dark: #0f172a;
+  --light: #f8fafc;
+  --accent: #22c55e;
+  --text: #1e293b;
+}
+
+/* ===== Body ===== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ===== Navigation Bar ===== */
+nav {
+  background: var(--dark);
+  padding: 18px 0;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: #cbd5f5;
+  margin: 0 18px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 4px;
+}
+
+/* ===== Page Headings ===== */
+h1 {
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 2.4rem;
+  color: var(--dark);
+  letter-spacing: 1px;
+}
+
+/* ===== Content Containers ===== */
+p, ul, form {
+  width: 75%;
+  max-width: 900px;
+  margin: 20px auto;
+  font-size: 1.05rem;
+  background: var(--light);
+  padding: 22px 26px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+/* ===== Lists ===== */
+ul {
+  list-style: none;
+}
+
+ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+  position: relative;
+  padding-left: 22px;
+}
+
+ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* ===== Buttons ===== */
+button {
+  display: inline-block;
+  padding: 12px 26px;
+  background: linear-gradient(135deg, var(--primary), #2563eb);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(13,110,253,0.35);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(13,110,253,0.5);
+}
+
+/* ===== Forms ===== */
+form label {
+  font-weight: 600;
+  margin-top: 10px;
+  display: block;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.95rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(13,110,253,0.15);
+}
+
+/* ===== Footer Text (Contact Page Info) ===== */
+p:last-of-type {
+  background: transparent;
+  box-shadow: none;
+  text-align: center;
+  font-weight: 500;
+  color: #475569;
+}
+
+/* ===== Small Screens ===== */
+@media (max-width: 768px) {
+  p, ul, form {
+    width: 90%;
+    padding: 18px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ===== Scroll Progress Bar ===== */
+#scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #22c55e, #0d6efd);
+  width: 0%;
+  z-index: 2000;
+}
+
+/* ===== Theme Toggle Button ===== */
+#themeToggle {
+  position: fixed;
+  top: 15px;       /* move to top */
+  right: 15px;     /* right corner */
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;     /* ensure icon visible */
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;   /* above everything */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+}
+
+#themeToggle:hover {
+  transform: scale(1.1);
+}
+
+/* ===== Dark Theme ===== */
+body.dark {
+  background: linear-gradient(135deg, #020617, #020617);
+  color: #e5e7eb;
+}
+
+body.dark p,
+body.dark ul,
+body.dark form {
+  background: #020617;
+  color: #e5e7eb;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+body.dark nav {
+  background: #020617;
+}
+
+/* ===== DARK MODE VISIBILITY FIXES ===== */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark span,
+body.dark figcaption,
+body.dark label {
+  color: #e5e7eb !important;
+}
+
+body.dark .skills-container,
+body.dark .testimonial,
+body.dark .timeline,
+body.dark .gallery,
+body.dark figure {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+
+/* ===== Skills Bars ===== */
+.skills-container {
+  width: 75%;
+  max-width: 900px;
+  margin: 30px auto;
+  background: var(--light);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill span {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.bar {
+  width: 100%;
+  background: #e5e7eb;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 14px;
+}
+
+.fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #22c55e, #0d6efd);
+  border-radius: 20px;
+  transition: width 1.5s ease;
+}
+
+/* ===== Loader ===== */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: #020617;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #334155;
+  border-top: 6px solid #22c55e;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===== Timeline ===== */
+.timeline {
+  width: 75%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding-left: 20px;
+  border-left: 3px solid var(--primary);
+}
+
+.event {
+  margin-bottom: 25px;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.6s ease;
+}
+
+.event.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.year {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* ===== Testimonials ===== */
+.testimonials {
+  width: 75%;
+  max-width: 900px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.testimonial {
+  background: var(--light);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  font-style: italic;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* ===== Gallery ===== */
+.gallery {
+  width: 75%;
+  max-width: 900px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ===== Lightbox ===== */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(2,6,23,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 4000;
+}
+
+#lightbox img {
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 12px;
+}
+
+/* ===== Dark Mode Text Visibility Fix ===== */
+body.dark h1,
+body.dark h2,
+body.dark p,
+body.dark li,
+body.dark span,
+body.dark label {
+  color: #e5e7eb;
+}
+
+.skill span {
+  color: var(--text) !important;
+}
+
+body.dark .skill span {
+  color: #f1f5f9 !important;
+}
+
+.content-container p {
+  width: 75%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 22px 26px;
+  background: var(--light);
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  font-size: 1.05rem;
+  text-align: left; /* or center if you want */
+}
+
+/* Dark theme support */
+body.dark .content-container p {
+  background: #020617;
+  color: #e5e7eb;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+/* ===== Typing Text Layout Stability ===== */
+.typing-wrapper {
+  min-height: 3.2rem;        /* reserves vertical space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#typingText {
+  display: inline-block;
+  min-width: 22ch;          /* reserves horizontal space */
+  white-space: nowrap;
+}
